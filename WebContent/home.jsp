@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>야구팀별 선수 정보</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -27,7 +28,8 @@
 						<c:forEach var="team" items="${teamList}" varStatus="status">
 							<tr>
 								<td>${status.index+1}</td>
-								<td><a href="" onclick="selectTeam('${team}')">${team}</a></td>
+								<%-- onclick 내에 return false를 추가해 주면 href 링크의 작동을 방지함 --%>
+								<td><a href="" onclick="selectTeam('${team}'); return false;">${team}</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

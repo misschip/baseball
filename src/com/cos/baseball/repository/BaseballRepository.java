@@ -34,10 +34,12 @@ public class BaseballRepository {
 				teamList.add(teamName);
 			}
 			
-			System.out.println("BaseballRepository : findAll : teamList: " + teamList);
+			// System.out.println("BaseballRepository : findAll : teamList: " + teamList);
 			return teamList;
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			
 		}
 		
 		return null;
