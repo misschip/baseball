@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cos.baseball.action.Action;
 import com.cos.baseball.action.HomeAction;
+import com.cos.baseball.action.SelectPlayerAction;
 import com.cos.baseball.action.SelectTeamAction;
 
 
@@ -39,6 +40,8 @@ public class BaseballController extends HttpServlet {
 			return new HomeAction();
 		} else if (cmd.equals("selectTeam")) {
 			return new SelectTeamAction();
+		} else if (cmd.equals("selectPlayer")) {
+			return new SelectPlayerAction();
 		}
 		
 		return null;

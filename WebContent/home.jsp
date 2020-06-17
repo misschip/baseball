@@ -9,6 +9,8 @@
 <title>야구팀별 선수 정보</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 <body>
 	<h1>야구팀별 선수 정보</h1>
@@ -27,7 +29,7 @@
 					<tbody>
 						<c:forEach var="team" items="${teamList}" varStatus="status">
 							<tr>
-								<td>${status.index+1}</td>
+								<td>${status.count}</td>
 								<%-- onclick 내에 return false를 추가해 주면 href 링크의 작동을 방지함 --%>
 								<td><a href="" onclick="selectTeam('${team}'); return false;">${team}</a></td>
 							</tr>
@@ -45,12 +47,12 @@
 					</tr>
 				</thead>
 				
-				<tbody>
+				<tbody id="playerList">
 				</tbody>
 				</table>
 			</div>
 			
-			<div class="col-sm-2">
+			<div class="col-sm-8">
 				<table>
 				<thead>
 					<tr>
@@ -62,30 +64,12 @@
 					</tr>
 				</thead>
 				
-				<tbody>
+				<tbody id="playerInfo">
 				</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
-	
-<script>
-	function selectTeam(team) {
-		console.log("선택된 팀 : ", team);
-		
-		$.ajax({
-			type: "post",
-			url: "/kbo?cmd=selectTeam",
-			data: "team=" + team,
-			contentType: "application/x-www-form-urlencoded; charset=utf-8",
-			dataType: "json"
-		}).done(function(result){
-			
-		}).fail(function(error){
-			
-		});
-		
-	}
-</script>	
+<script src="js/baseball.js"></script>
 </body>
 </html>
