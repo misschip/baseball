@@ -112,7 +112,7 @@ public class BaseballRepository {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			
+			DBConn.close(conn, pstmt, rs);
 		}
 		
 		return null;

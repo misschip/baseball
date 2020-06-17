@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 public class DBConn {
 	
 	public static Connection getConnection() {
+		// 이 메서드의 코드는 apache tomcat 문서에서 가져옴
 		try {
 			Context initContext = new InitialContext();
 			Context envContext  = (Context)initContext.lookup("java:/comp/env");

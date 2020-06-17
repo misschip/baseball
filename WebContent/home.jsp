@@ -7,18 +7,19 @@
 <head>
 <meta charset="UTF-8">
 <title>야구팀별 선수 정보</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 </head>
 <body>
-	<h1>야구팀별 선수 정보</h1>
 	
 	<div class="container">
+	<h1>야구팀별 선수 정보</h1>
 		<div class="row">
 			<div class="col-sm-2">
-				<table border="1">
+				<table class="table table-striped">
+					<caption style="caption-side: top">KBO 팀 목록</caption>
 					<thead>
 						<tr>
 							<td>번호</td>
@@ -39,10 +40,11 @@
 			</div>
 			
 			<div class="col-sm-2">
-				<table>
+				<table class="table table-striped">
+				<caption style="caption-side: top">팀별 선수 목록</caption>
 				<thead>
 					<tr>
-						<td>id</td>
+						<td>번호</td>
 						<td>이름</td>
 					</tr>
 				</thead>
@@ -52,8 +54,10 @@
 				</table>
 			</div>
 			
+			
 			<div class="col-sm-8">
-				<table>
+				<table class="table table-striped">
+				<caption style="caption-side: top">선수 상세 정보</caption>
 				<thead>
 					<tr>
 						<td>id</td>

@@ -18,6 +18,8 @@ public class SelectTeamAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String team = request.getParameter("team");
 		
+		if (team == null || team.equals("")) return;
+		
 		BaseballRepository baseballRepository = BaseballRepository.getInstance();
 		List<Baseball> teamData = baseballRepository.selectTeam(team);
 		
