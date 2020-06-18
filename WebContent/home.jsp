@@ -17,7 +17,7 @@
 	<div class="container">
 	<h1>야구팀별 선수 정보</h1>
 		<div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<table class="table table-striped">
 					<caption style="caption-side: top">KBO 팀 목록</caption>
 					<thead>
@@ -39,7 +39,7 @@
 				</table>
 			</div>
 			
-			<div class="col-sm-2">
+			<div class="col-sm-3">
 				<table class="table table-striped">
 				<caption style="caption-side: top">팀별 선수 목록</caption>
 				<thead>
@@ -55,7 +55,7 @@
 			</div>
 			
 			
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<table class="table table-striped">
 				<caption style="caption-side: top">선수 상세 정보</caption>
 				<thead>
